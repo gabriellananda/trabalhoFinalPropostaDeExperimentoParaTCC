@@ -14,10 +14,11 @@ EXP-REQ-PT-ENGSW-2025
   - v1.0 - Criação do repositório e do readme.md.
   - v1.1 – Descrição da identificação básica, contexto e problema.
   - v1.2 - Descrição do objetivo, escopo, stakeholders, impacto, riscos de alto nível, premissas e critérios de sucesso.
+  - v1.3 - Descrição do modelo conceitual e hipóteses; variáveis, fatores, tratamentos e objetos de estudo; desenho experimental.
 
 ### 1.4 Datas
 - **Data de criação:** 23/11/2025  
-- **Última atualização:** 24/11/2025
+- **Última atualização:** 28/11/2025
 
 ### 1.5 Autores
 - **Nome:** *Gabriella Fernanda Silva PInto*  
@@ -294,3 +295,218 @@ O experimento deverá ser **adiado ou cancelado** se:
 - Menos de 50% dos participantes esperados puderem comparecer no dia da coleta.  
 - Houver **falha crítica** no ambiente (laboratório indisponível, falta de energia ou internet) que inviabilize a execução.  
 - Houver reprovação ética ou administrativa da proposta pela coordenação ou pelo professor responsável (por exemplo, problemas com consentimento dos alunos ou uso de dados).
+
+---
+
+## 7. Modelo conceitual e hipóteses
+
+### 7.1 Modelo conceitual do experimento
+
+O modelo conceitual deste experimento parte da ideia de que a **forma de representação dos requisitos** (Protótipos Interativos em Figma vs. Especificações Textuais em PDF) pode influenciar o **desempenho dos estudantes** no desenvolvimento de uma tela de cadastro de petshop em HTML, CSS e JavaScript.
+
+O experimento assume que:
+
+- O **tipo de requisito** (protótipo vs. texto) é o **fator experimental principal**;
+- O **período do aluno** (1º, 5º, 8º) e o **nível de conhecimento autoavaliado** em HTML/CSS/JS atuam como **variáveis de bloqueio/moderação**, pois podem alterar a forma como o aluno interpreta e usa os requisitos;
+- As **respostas** (variáveis dependentes) são medidas em termos de:
+  - Qualidade funcional e de usabilidade da interface;
+  - Aderência aos requisitos;
+  - Tempo de desenvolvimento;
+  - Experiência subjetiva (clareza, facilidade, satisfação).
+
+De forma integrada, o modelo conceitual entende que:
+
+- O tipo de representação dos requisitos influencia o desempenho no desenvolvimento, e esse efeito pode variar de acordo com o período do aluno e seu nível de conhecimento técnico.
+
+### 7.2 Hipóteses formais (H₀, H₁)
+
+**Hipótese geral**
+
+- **H₀ (Hipótese nula geral):**  
+  O tipo de representação dos requisitos (protótipo interativo vs. especificação textual) **não produz diferença estatisticamente significativa** no desempenho dos estudantes no desenvolvimento da tela de cadastro.
+
+- **H₁ (Hipótese alternativa geral):**  
+  O tipo de representação dos requisitos (protótipo interativo vs. especificação textual) **produz diferença estatisticamente significativa** em pelo menos uma dimensão de desempenho dos estudantes (qualidade, aderência, tempo de desenvolvimento, usabilidade, clareza percebida, facilidade ou satisfação).
+
+**Hipóteses específicas por dimensão**
+
+- **Qualidade da implementação**
+  - **H₀₁:** Não há diferença significativa na qualidade funcional e de usabilidade entre interfaces desenvolvidas com requisitos em protótipo e com requisitos em texto.  
+  - **H₁₁:** Existe diferença significativa na qualidade funcional e/ou de usabilidade entre interfaces desenvolvidas com requisitos em protótipo e com requisitos em texto.
+
+- **Eficiência temporal**
+  - **H₀₂:** O tempo total de desenvolvimento (dentro dos 50 minutos) não difere significativamente entre os grupos (protótipo vs. texto).  
+  - **H₁₂:** O tempo total de desenvolvimento (dentro dos 50 minutos) difere significativamente entre os grupos (protótipo vs. texto).
+
+- **Aderência aos requisitos**
+  - **H₀₃:** A aderência aos requisitos (requisitos corretamente implementados, faltantes e incorretos) não difere significativamente entre os grupos.  
+  - **H₁₃:** A aderência aos requisitos difere significativamente entre os grupos.
+
+- **Experiência subjetiva do desenvolvedor**
+  - **H₀₄:** Não há diferença significativa entre os grupos quanto à clareza percebida dos requisitos, facilidade de desenvolvimento e satisfação geral.  
+  - **H₁₄:** Há diferença significativa entre os grupos quanto à clareza percebida dos requisitos, facilidade de desenvolvimento e/ou satisfação geral.
+
+### 7.3 Nível de significância e considerações de poder
+
+- **Nível de significância (α):**  
+  Será adotado **α = 0,05**, valor usual em experimentos de Engenharia de Software.
+
+- **Poder estatístico e tamanho da amostra:**  
+  O experimento utilizará **60 estudantes** (30 no tratamento com protótipo, 30 no tratamento com texto), distribuídos de forma balanceada entre:
+  - Períodos (1º, 5º e 8º);  
+  - Níveis de conhecimento (abaixo/igual a 5 e acima de 5 na autoavaliação).
+
+  Trata-se de um experimento de **escala acadêmica** (disciplina), em que o tamanho da amostra é determinado pela quantidade de alunos disponíveis. Não há cálculo formal de poder estatístico, mas o tamanho da amostra é considerado razoável para observar tendências e realizar testes básicos (como t-teste, ANOVA ou testes não paramétricos equivalentes), desde que os resultados sejam interpretados com cautela e explicitando as limitações.
+
+---
+
+## 8. Variáveis, fatores, tratamentos e objetos de estudo
+
+### 8.1 Objetos de estudo
+
+Os **objetos de estudo principais** são:
+
+- O **tipo de representação dos requisitos** (protótipo interativo vs. especificação textual), que é o fator experimental principal;
+- As **implementações da tela de cadastro de petshop** produzidas pelos estudantes, que serão utilizadas para medir as variáveis dependentes (qualidade, aderência, usabilidade, etc.).
+
+### 8.2 Sujeitos / participantes (visão geral)
+
+Os sujeitos do experimento são:
+
+- **60 estudantes** do curso de Engenharia de Software da PUC Minas – Unidade Lourdes, sendo:
+  - 20 alunos do 1º período;
+  - 20 alunos do 5º período;
+  - 20 alunos do 8º período.
+
+Eles possuem **níveis variados de conhecimento** em HTML, CSS e JavaScript, medidos por autoavaliação em escala de 0 a 10 para cada tecnologia.
+
+### 8.3 Variáveis independentes (fatores) e seus níveis
+
+A tabela abaixo resume as variáveis independentes (fatores experimentais e de bloqueio) e seus níveis.
+
+#### Tabela 1 – Variáveis (independente, dependentes, moderadoras) e descrições
+
+| Tipo de variável | Nome | Descrição | Métricas associadas |
+|------------------|------|-----------|----------------------|
+| Independente (fator principal) | Tipo de requisito | Forma de representação dos requisitos fornecidos ao aluno: Protótipo Interativo (Figma) ou Especificação Textual (PDF). | Tratamentos T1 (Protótipo) / T2 (Texto) |
+| Dependente | Qualidade funcional | Grau em que as funcionalidades esperadas (campos, botões, validações básicas) funcionam corretamente. | M1, M4 |
+| Dependente | Usabilidade | Qualidade de uso percebida e analisada, incluindo problemas de layout, legibilidade, navegação e feedback. | M2, M3, M4 |
+| Dependente | Tempo de desenvolvimento | Tempo total gasto pelo aluno para desenvolver a interface (até o limite de 50 minutos). | M5 |
+| Dependente | Tempo de retrabalho | Tempo adicional gasto em correções, se houver, após a primeira avaliação. | M6 |
+| Dependente | Aderência aos requisitos | Grau em que os requisitos especificados foram corretamente implementados (corretos, faltantes, incorretos). | M7, M8, M9 |
+| Dependente | Clareza percebida | Percepção do aluno sobre o quão claros estavam os requisitos recebidos (texto ou protótipo). | M12 |
+| Dependente | Facilidade percebida | Percepção sobre o quão fácil foi desenvolver a tela com base na representação fornecida. | M13 |
+| Dependente | Satisfação geral | Grau de satisfação do aluno com a atividade como um todo. | M14 |
+| Moderadora / Bloqueio | Período do aluno | Momento da formação em que o aluno se encontra (1º, 5º ou 8º período). | M10 |
+| Moderadora / Bloqueio | Nível de conhecimento em HTML/CSS/JS | Autoavaliação do aluno (0–10 para cada tecnologia) utilizada para estratificar em grupos “abaixo/igual a 5” e “acima de 5”. | (Formulário de autoavaliação) |
+| Controle | Ambiente e ferramentas | Laboratório, VS Code, Chrome, Figma, tempo de 50 minutos, mesma tarefa de desenvolvimento. | (Parâmetros constantes) |
+
+### 8.4 Tratamentos (condições experimentais)
+
+Serão definidos dois tratamentos principais:
+
+- **T1 – Protótipo Interativo (Figma):**  
+  Os alunos recebem um protótipo interativo da tela de cadastro (cliente + animal) no Figma, representando campos, layout e fluxo de interação.
+
+- **T2 – Especificação Textual (PDF):**  
+  Os alunos recebem uma especificação textual em PDF, descrevendo os requisitos da mesma tela, com campos obrigatórios, opcionais e regras básicas.
+
+### 8.5 Variáveis dependentes (respostas)
+
+As principais variáveis dependentes (já alinhadas com as métricas M1–M14) são:
+
+- **Qualidade funcional:** Nº de defeitos funcionais (M1) e nota global (M4);
+- **Usabilidade:** Nº de problemas de usabilidade (M2) e nota de usabilidade (M3);
+- **Tempo:** Tempo total de desenvolvimento (M5) e eventual tempo de retrabalho (M6);
+- **Aderência:** Cobertura de requisitos (M7), requisitos faltantes (M8) e incorretos (M9);
+- **Experiência subjetiva:** Clareza percebida (M12), facilidade (M13) e satisfação (M14).
+
+### 8.6 Variáveis de controle / bloqueio
+
+- **Período do aluno (M10):** 1º, 5º e 8º período;
+- **Nível de conhecimento (autoavaliação em 0–10):** usado para formar subgrupos:
+  - Abaixo ou igual a 5;
+  - Acima de 5.
+- **Ambiente de execução:** Laboratórios da PUC Minas Lourdes, mesmos recursos (VS Code, Chrome, Figma quando aplicável), mesma tarefa, mesmo tempo (50 minutos).
+
+### 8.7 Possíveis variáveis de confusão conhecidas
+
+- Diferenças reais de experiência prática não capturadas completamente pela autoavaliação;
+- Familiaridade prévia com Figma ou com leitura de especificações textuais;
+- Motivação individual e interesse do aluno na atividade;
+- Nível de cansaço ou carga de outras disciplinas no dia da coleta.
+
+Essas variáveis não serão controladas totalmente, mas serão consideradas na discussão sobre ameaças à validade.
+
+### 8.8 Tabela de fatores, tratamentos e combinações
+
+Para cumprir o requisito da disciplina, segue uma tabela com os fatores, tratamentos e combinação planejada entre eles.
+
+#### Tabela 2 – Fatores, tratamentos e combinações
+
+| Fator | Níveis | Tipo |
+|-------|--------|------|
+| Tipo de requisito | Protótipo (T1); Texto (T2) | Fator experimental principal |
+| Período do aluno | 1º; 5º; 8º | Fator de bloqueio / moderador |
+| Nível de conhecimento | ≤ 5; > 5 | Fator de bloqueio / moderador |
+
+**Combinações planejadas (por período e nível):**
+
+| Período | Nível de conhecimento (autoavaliação) | T1 – Protótipo | T2 – Texto | Total de alunos |
+|---------|----------------------------------------|----------------|------------|------------------|
+| 1º      | ≤ 5                                    | 5              | 5          | 10               |
+| 1º      | > 5                                    | 5              | 5          | 10               |
+| 5º      | ≤ 5                                    | 5              | 5          | 10               |
+| 5º      | > 5                                    | 5              | 5          | 10               |
+| 8º      | ≤ 5                                    | 5              | 5          | 10               |
+| 8º      | > 5                                    | 5              | 5          | 10               |
+| **Total** | —                                     | **30**         | **30**     | **60**           |
+
+---
+
+## 9. Desenho experimental
+
+### 9.1 Tipo de desenho
+
+O experimento será conduzido como um:
+
+- **Desenho com grupos paralelos**, com dois tratamentos (Protótipo vs. Texto);
+- **Balanceado** em relação ao número de participantes por tratamento (30 em cada);
+- Com **bloqueio** por:
+  - Período (1º, 5º, 8º);
+  - Nível de conhecimento (abaixo/igual a 5, acima de 5).
+
+Na prática, trata-se de um desenho que se aproxima de um **fatorial 2 × 3**, com estratificação adicional pelo nível de conhecimento.
+
+### 9.2 Randomização e alocação
+
+- A alocação em T1 (Protótipo) ou T2 (Texto) será feita:
+  - Separadamente **dentro de cada período** (1º, 5º, 8º);
+  - E **dentro de cada faixa de conhecimento** (≤5 e >5).
+- Após coletar as autoavaliações, os alunos de cada período serão ordenados (por nota ou aleatoriamente) e então divididos em:
+  - 10 com conhecimento ≤5;
+  - 10 com conhecimento >5.
+- Em cada subgrupo de 10, a alocação será aleatória:
+  - 5 sorteados para Protótipo (T1);
+  - 5 sorteados para Texto (T2).
+
+Essa randomização pode ser feita com uma planilha simples, função de sorteio ou ferramenta online.
+
+### 9.3 Balanceamento e contrabalanço
+
+- **Balanceamento:**  
+  A tabela de combinações (Seção 8.8) garante que, idealmente, haja o mesmo número de alunos em cada combinação de período × nível de conhecimento × tipo de requisito.
+- **Contrabalanço:**  
+  Como cada aluno participa apenas de um tratamento e realiza apenas uma tarefa, não há efeitos de ordem ou aprendizagem entre tratamentos. Portanto, não é necessário contrabalanço de ordem de execução.
+
+### 9.4 Número de grupos e sessões
+
+- **Grupos:** Dois grupos principais, um por tratamento:
+  - Grupo T1: recebe os requisitos no formato **protótipo interativo**;
+  - Grupo T2: recebe os requisitos no formato **especificação textual**.
+- **Sessões:**  
+  O experimento será conduzido em **uma sessão principal de 50 minutos** por turma/período (ou turmas agrupadas), com:
+  - Preenchimento do formulário de autoavaliação;
+  - Distribuição dos tratamentos;
+  - Execução da tarefa de desenvolvimento;
+  - Aplicação do questionário pós-tarefa.
