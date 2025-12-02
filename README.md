@@ -15,10 +15,11 @@ EXP-REQ-PT-ENGSW-2025
   - v1.1 – Descrição da identificação básica, contexto e problema.
   - v1.2 - Descrição do objetivo, escopo, stakeholders, impacto, riscos de alto nível, premissas e critérios de sucesso.
   - v1.3 - Descrição do modelo conceitual e hipóteses; variáveis, fatores, tratamentos e objetos de estudo; desenho experimental.
+  - v1.4 - Descrição da população, sujeitos e amostragem; instrumentação e protocolo operacional; plano de análise de dados (pré-execução)
 
 ### 1.4 Datas
 - **Data de criação:** 23/11/2025  
-- **Última atualização:** 28/11/2025
+- **Última atualização:** 01/12/2025
 
 ### 1.5 Autores
 - **Nome:** *Gabriella Fernanda Silva PInto*  
@@ -510,3 +511,391 @@ Essa randomização pode ser feita com uma planilha simples, função de sorteio
   - Distribuição dos tratamentos;
   - Execução da tarefa de desenvolvimento;
   - Aplicação do questionário pós-tarefa.
+
+---
+
+## 10. População, sujeitos e amostragem
+
+### 10.1 População-alvo
+A população-alvo deste experimento é composta por estudantes de cursos de graduação em Engenharia de Software que:
+
+- Possuem contato com desenvolvimento web (HTML, CSS, JavaScript);
+- Participam de disciplinas que envolvem implementação de interfaces e uso de requisitos de software;
+- Podem ser expostos a diferentes formas de representação de requisitos (texto vs. protótipo).
+
+No contexto deste estudo, a população-alvo corresponde aos estudantes do curso de Engenharia de Software da PUC Minas – Unidade Lourdes, distribuídos entre os períodos 1º, 5º e 8º.
+
+### 10.2 Critérios de inclusão de sujeitos
+Um estudante será considerado elegível se:
+
+- Estiver regularmente matriculado na PUC Minas – Engenharia de Software;
+- Estiver cursando o 1º, 5º ou 8º período;
+- Tiver disponibilidade para participar da sessão de laboratório (50 minutos);
+- Concordar em participar do experimento;
+- Possuir noções básicas de HTML, CSS e JavaScript.
+
+### 10.3 Critérios de exclusão de sujeitos
+Um estudante poderá ser excluído caso:
+
+- Não autorize o uso de dados acadêmicos;
+- Ausente-se no dia da coleta;
+- Não realize as etapas mínimas da atividade (implementação ou questionários);
+- Tenha conflito de interesse (ex.: acesso prévio aos requisitos dos dois tratamentos).
+
+### 10.4 Tamanho da amostra planejado (por grupo)
+
+- **Total planejado:** 60 estudantes  
+- **Por período:**  
+  - 20 do 1º período  
+  - 20 do 5º período  
+  - 20 do 8º período
+- **Por tratamento:**  
+  - 30 no grupo T1 (Protótipo)
+  - 30 no grupo T2 (Texto)
+- **Por nível de conhecimento:**  
+  - 10 ≤ 5 em HTML/CSS/JS  
+  - 10 > 5  
+  - Em cada grupo: 5 recebem protótipo, 5 recebem texto
+
+### 10.5 Método de seleção / recrutamento
+O método será:
+
+- Amostra de conveniência: estudantes presentes no dia da execução;
+- Convite realizado durante a disciplina;
+- Participantes que aceitarem e atenderem aos critérios serão incluídos;
+- Alocação aleatória será feita conforme definido no desenho experimental.
+
+### 10.6 Treinamento e preparação dos sujeitos
+Antes da execução:
+
+- Serão explicados:
+  - Objetivo geral do experimento;
+  - Atividade a ser desenvolvida;
+  - Tempo disponível (50 minutos);
+  - Instrumentos a serem preenchidos.
+- Não haverá treinamento técnico específico (HTML/CSS/JS);
+- Não haverá treinamento avançado em Figma;
+- O protótipo será simples e intuitivo.
+
+---
+
+## 11. Instrumentação e protocolo operacional
+
+### 11.1 Instrumentos de coleta
+Os instrumentos utilizados serão:
+
+- **Formulário de autoavaliação técnica (HTML/CSS/JS)**  
+  - Escala de 0 a 10  
+  - Usado para estratificação (≤5, >5)
+
+- **Pacote de requisitos – Protótipo (T1)**  
+  - Protótipo interativo em Figma  
+  - Entrega visual dos requisitos
+
+- **Pacote de requisitos – Texto (T2)**  
+  - PDF textual com os requisitos
+
+- **Ambiente de desenvolvimento**  
+  - VS Code, navegador Chrome  
+  - Registro de tempo via planilha ou timer central
+
+- **Checklist/rubrica de avaliação**  
+  - Para métricas:
+    - M1: Defeitos funcionais
+    - M2: Problemas de usabilidade
+    - M3: Nota de usabilidade
+    - M4: Nota geral
+
+- **Questionário pós-tarefa**  
+  - M12: Clareza
+  - M13: Facilidade
+  - M14: Satisfação
+
+- **Planilha final de consolidação**  
+  - ID anônimo  
+  - Tratamento  
+  - Período  
+  - Autoavaliação (M11)  
+  - Todas as métricas M1–M14
+
+### 11.2 Materiais de suporte
+Incluem:
+
+- Instruções escritas com:
+  - Objetivo
+  - Regras
+  - Escopo da implementação
+  - Tempo limite
+- Slides/Quadro contendo:
+  - Passos da atividade
+  - Esclarecimentos básicos
+- Termo de consentimento (caso necessário)
+
+### 11.3 Procedimento experimental (protocolo passo a passo)
+
+### **11.3.1 Materiais de suporte**
+
+Serão fornecidos aos participantes:
+
+- **Instruções escritas** contendo:
+  - Objetivo geral do experimento;
+  - Regras de participação;
+  - Escopo da implementação (tela de cadastro: cliente + animal);
+  - Tempo limite de 50 minutos;
+  - Orientações sobre o uso dos requisitos (não compartilhar entre grupos).
+
+- **Slides ou quadro** com:
+  - Passos da atividade (autoavaliação → requisitos → implementação → questionário);
+  - Esclarecimentos básicos (ex.: o experimento não vale nota, dúvidas gerais permitidas);
+  - Observações sobre comportamento esperado (independência dos grupos).
+
+- **Termo de consentimento** (caso necessário), explicando:
+  - Uso acadêmico dos dados;
+  - Garantia de anonimização dos participantes.
+
+### **11.3.2 Procedimento experimental (etapas detalhadas)**
+
+#### **1. Preparação (antes da execução)**
+- Criar e revisar todos os instrumentos:
+  - Formulário de autoavaliação técnica;
+  - Questionário pós-tarefa;
+  - Checklist/rubrica de avaliação;
+  - Planilha de registro das métricas M1–M14.
+- Finalizar:
+  - Protótipo interativo no Figma (T1);
+  - Especificação textual em PDF (T2).
+- Configurar o ambiente do laboratório:
+  - VS Code e navegador Chrome;
+  - Acesso ao Figma;
+  - Pasta/repositório para coleta dos códigos.
+
+#### **2. Abertura da sessão**
+- Apresentar o experimento e seu objetivo geral;
+- Explicar as etapas da atividade e o tempo limite (50 minutos);
+- Esclarecer que:
+  - A atividade **não vale nota**;
+  - Avaliação é do experimento, não do aluno.
+
+#### **3. Autoavaliação**
+- Aplicar o formulário de autoavaliação técnica (HTML/CSS/JS – escala de 0 a 10);
+- Registrar os valores na planilha de dados.
+
+#### **4. Formação dos grupos**
+- Separar os alunos por período (1º, 5º, 8º);
+- Estratificar cada período conforme nível técnico:
+  - (iniciantes/intermediários) ≤ 5;
+  - (intermediários/avançados) > 5;
+- Em cada subgrupo de 10 alunos:
+  - Sortear **5 para T1 (Protótipo)**;
+  - Sortear **5 para T2 (Texto)**;
+- Registrar a alocação em planilha.
+
+#### **5. Distribuição dos requisitos**
+- Entregar:
+  - Link do protótipo em Figma (T1);
+  - PDF textual dos requisitos (T2);
+- Reforçar que **não é permitido compartilhar requisitos** entre os grupos.
+
+#### **6. Execução da tarefa**
+- Iniciar a contagem de 50 minutos simultaneamente;
+- Cada aluno implementa individualmente a tela de cadastro;
+- Apenas dúvidas gerais sobre o enunciado podem ser respondidas;
+- Professores/monitores devem evitar fornecer dicas que favoreçam um grupo.
+
+#### **7. Encerramento e coleta**
+- Após 50 minutos, encerrar o desenvolvimento e solicitar o salvamento dos arquivos;
+- Coletar os códigos (repositório ou pasta compartilhada);
+- Registrar:
+  - **M5** — Tempo total de desenvolvimento;
+  - **M6** — Tempo de retrabalho ou tempo extra (caso ultrapasse o limite).
+
+#### **8. Questionário pós-tarefa**
+- Aplicar o questionário sobre:
+  - **Clareza percebida (M12)**;
+  - **Facilidade (M13)**;
+  - **Satisfação (M14)**;
+- Associar respostas ao identificador anônimo do aluno.
+
+#### **9. Avaliação das implementações**
+- Avaliadores (professor/monitores) inspecionam:
+  - Código HTML/CSS/JS;
+  - Interface funcional e visual.
+- Preencher as métricas:
+  - **M1, M2, M3, M4** – Qualidade funcional e usabilidade;
+  - **M7, M8, M9** – Aderência aos requisitos.
+
+#### **10. Consolidação final e verificação de incidentes**
+- Unir em planilha única:
+  - Autoavaliação (nível técnico);
+  - Tratamento (T1/T2);
+  - Período;
+  - Métricas M1–M14.
+- Verificar incidentes técnicos ocorridos durante a sessão:
+  - Caso existam, registrar e marcar aluno como exceção (conforme fluxograma).
+- Preparar dataset final para análise estatística.
+
+### 11.3.1 Fluxograma do experimento
+
+```mermaid
+flowchart TD
+
+%% ============================
+%% FASE 1 - PREPARACAO GERAL
+%% ============================
+
+A[Definicao do experimento: Objetivo, hipoteses, variaveis, fatores, tratamentos] --> A2[Definicao das metricas M1-M14]
+A2 --> A3[Identificacao dos stakeholders: Estudantes, docente, orientador, coordenacao]
+A3 --> A4[Preparacao dos instrumentos: Prototipo Figma, PDF textual, formularios, rubricas, checklists]
+A4 --> A5[Configuracao logistica: Laboratorio, VS Code, navegador, acesso ao Figma, planilhas]
+
+%% ============================
+%% FASE 2 - INICIO DA SESSAO
+%% ============================
+
+A5 --> B[Inicio da sessao no laboratorio: Apresentacao geral e instrucoes]
+B --> C{Autoavaliacao preenchida?}
+
+C -->|Sim| D[Formacao dos grupos: Por periodo e nivel de conhecimento]
+C -->|Nao| C1[Solicitar preenchimento ou registrar manualmente] --> D
+
+%% ============================
+%% FASE 3 - DISTRIBUICAO DOS TRATAMENTOS
+%% ============================
+
+D --> E[Distribuicao dos requisitos: T1 Prototipo Interativo / T2 Especificacao Textual]
+
+%% ============================
+%% FASE 4 - EXECUCAO
+%% ============================
+
+E --> F[Execucao da tarefa: Limite 50 minutos]
+
+F --> G{Concluiu dentro do tempo?}
+
+G -->|Sim| H[Coleta do codigo produzido]
+G -->|Nao| H1[Registrar tempo extra: Flag para analise] --> H
+
+%% ============================
+%% FASE 5 - QUESTIONARIOS E AVALIACAO
+%% ============================
+
+H --> I[Aplicacao do questionario pos tarefa: M12 clareza, M13 facilidade, M14 satisfacao]
+I --> J[Avaliacao das implementacoes: Rubrica + checklist / Coleta M1, M2, M3, M4, M7, M8, M9]
+
+%% ============================
+%% FASE 6 - VERIFICACAO DE PROBLEMAS
+%% ============================
+
+J --> K{Problemas tecnicos/incidentes?}
+
+K -->|Nao| L[Consolidacao das metricas: M1 ate M14]
+K -->|Sim| K1[Registrar incidente e marcar aluno como excecao] --> L
+
+%% ============================
+%% FASE 7 - FINALIZACAO
+%% ============================
+
+L --> M[Fim do experimento: Preparacao dos dados para analise estatistica]
+```
+
+---
+
+### 11.4 Plano de piloto (se houver piloto, escopo e critérios de ajuste)
+
+Sempre que possível, será conduzido um **piloto em pequena escala** para validar o protocolo experimental antes da execução oficial. O piloto deve envolver:
+
+- **Um grupo reduzido de 5 a 10 alunos**, preferencialmente de um único período;
+- **Execução completa do protocolo**, incluindo:
+  - Autoavaliação;
+  - Distribuição dos requisitos (T1/T2);
+  - Desenvolvimento da tela;
+  - Aplicação do questionário pós-tarefa.
+
+#### **Objetivos do piloto**
+O piloto tem como finalidade:
+
+- Verificar se as instruções estão **claras** para os estudantes;
+- Avaliar se o **tempo de 50 minutos** é suficiente para a execução da tarefa;
+- Testar a **logística de distribuição** dos requisitos (protótipo e PDF) e a coleta dos códigos;
+- Ajustar o **questionário pós-tarefa**, removendo ou reformulando questões confusas;
+- Validar a **rubrica/checklist** de avaliação das implementações.
+
+#### **Critérios de ajuste**
+O protocolo poderá ser ajustado se forem observados:
+
+- Dificuldade generalizada na conclusão da tela dentro do tempo → *reduzir complexidade dos requisitos*;
+- Muitas dúvidas recorrentes sobre o enunciado → *revisar e reforçar as instruções escritas*;
+- Instrumentos muito longos, repetitivos ou confusos → *simplificar formulários e checklists*.
+
+---
+
+## 12. Plano de análise de dados (pré-execução)
+
+### 12.1 Estratégia geral de análise
+
+A análise dos dados será conduzida visando responder às questões de pesquisa definidas na matriz GQM. A estratégia envolve:
+
+- Descrever os dados coletados (médias, desvios-padrão, distribuições) por grupo (T1 vs. T2);
+- Comparar os grupos quanto às variáveis dependentes principais:
+  - Qualidade (M1–M4);
+  - Tempo de desenvolvimento (M5, M6);
+  - Aderência aos requisitos (M7–M9);
+  - Experiência subjetiva (M12–M14);
+- Investigar efeitos de:
+  - **Período** (1º, 5º, 8º);
+  - **Nível de conhecimento técnico** (autoavaliação 0–10);
+- Responder às questões da matriz GQM (Seção 3.4).
+
+### 12.2 Métodos estatísticos planejados
+
+#### **Análises descritivas**
+- Médias, medianas, desvios-padrão, valores mínimos e máximos para M1–M14;
+- Visualizações simples (boxplots, histogramas) quando aplicável.
+
+#### **Testes de comparação entre T1 e T2**
+- Se as variáveis apresentarem distribuição aproximadamente normal:
+  - **Teste t de Student** para amostras independentes.
+- Se as premissas forem violadas:
+  - **Teste de Mann–Whitney** (não paramétrico).
+
+#### **Análises com fatores adicionais**
+Se os dados permitirem:
+
+- **ANOVA de dois fatores** (ex.: tipo de requisito × período);
+- Ou análises estratificadas por subgrupos quando a normalidade não for atendida.
+
+#### **Associações e correlações**
+- Investigação de correlação entre nível de conhecimento (M11) e:
+  - Aderência aos requisitos (M7);
+  - Tempo de desenvolvimento (M5);
+  - Qualidade da interface (M1–M4).
+
+> As técnicas exatas poderão ser ajustadas após a análise exploratória dos dados brutos, conforme boas práticas de análise estatística.
+
+### 12.3 Tratamento de dados faltantes e outliers
+
+#### **Dados faltantes**
+- Caso o aluno não entregue código ou não responda ao questionário pós-tarefa, os dados desse aluno poderão ser retirados das análises que dependem dessas variáveis;
+- A quantidade de casos removidos será documentada e discutida na seção de validade.
+
+#### **Outliers**
+- Outliers serão inspecionados em métricas como:
+  - Tempo (M5, M6);
+  - Número de defeitos (M1).
+- Se houver justificativa clara (problema técnico, computador travado, etc.), esses casos poderão ser removidos das análises específicas;
+- Transformações estatísticas só serão usadas se justificadas, preservando a simplicidade e transparência da análise.
+
+### 12.4 Plano de análise para dados qualitativos (quando aplicável)
+
+Se o questionário pós-tarefa incluir campos abertos (comentários, sugestões), será realizada uma análise qualitativa simples:
+
+- Leitura exploratória dos comentários;
+- Agrupamento em categorias, como:
+  - “Clareza dos requisitos”;
+  - “Dificuldades técnicas”;
+  - “Tempo insuficiente”;
+  - “Percepção sobre protótipo vs. texto”;
+- Uso desses resultados para:
+  - Complementar a interpretação dos dados quantitativos;
+  - Identificar ameaças à validade interna;
+  - Sugerir melhorias para futuros experimentos.
