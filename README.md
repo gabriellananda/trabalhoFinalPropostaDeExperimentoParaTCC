@@ -16,10 +16,11 @@ EXP-REQ-PT-ENGSW-2025
   - v1.2 - Descrição do objetivo, escopo, stakeholders, impacto, riscos de alto nível, premissas e critérios de sucesso.
   - v1.3 - Descrição do modelo conceitual e hipóteses; variáveis, fatores, tratamentos e objetos de estudo; desenho experimental.
   - v1.4 - Descrição da população, sujeitos e amostragem; instrumentação e protocolo operacional; plano de análise de dados (pré-execução)
+  - v1.5 - Descrição da avaliação de validade (ameaças e mitigação).
 
 ### 1.4 Datas
 - **Data de criação:** 23/11/2025  
-- **Última atualização:** 01/12/2025
+- **Última atualização:** 05/12/2025
 
 ### 1.5 Autores
 - **Nome:** *Gabriella Fernanda Silva PInto*  
@@ -899,3 +900,88 @@ Se o questionário pós-tarefa incluir campos abertos (comentários, sugestões)
   - Complementar a interpretação dos dados quantitativos;
   - Identificar ameaças à validade interna;
   - Sugerir melhorias para futuros experimentos.
+
+---
+
+## 13. Avaliação de Validade (Ameaças e Mitigação)
+
+A seguir são apresentadas as principais ameaças às validades **de conclusão**, **interna**, **de constructo** e **externa**, bem como estratégias para mitigá-las no contexto do experimento proposto.
+
+### 13.1 Validade de conclusão
+
+Aponta a robustez estatística das conclusões obtidas.
+
+### **Possíveis ameaças**
+- **Tamanho de amostra limitado (N = 60):** pode reduzir o poder estatístico e dificultar a detecção de diferenças reais entre T1 e T2.  
+- **Violação de premissas estatísticas:** normalidade e homocedasticidade podem não ser atendidas.  
+- **Erros de medida:** avaliação subjetiva das interfaces pode introduzir variabilidade.  
+- **Variabilidade alta dentro dos grupos:** diferenças reais de habilidade não capturadas pela autoavaliação podem aumentar o ruído.
+
+### **Mitigações planejadas**
+- Uso de **testes não paramétricos** (Mann–Whitney, Kruskal–Wallis) quando necessário.  
+- Aplicação de **rubrica/checklist padronizada** para reduzir subjetividade na avaliação.  
+- Treinamento prévio do avaliador para calibrar critérios.  
+- Análise exploratória prévia para verificar normalidade e dispersões.  
+- Registro e análise transparente de valores outliers e casos especiais.
+
+### 13.2 Validade interna
+
+Aponta a possibilidade de outras causas explicarem o efeito observado, além do tratamento (T1/T2).
+
+### **Possíveis ameaças**
+- **Selection bias:** diferenças reais entre alunos (experiência, motivação) podem explicar os resultados.  
+- **History:** outras atividades no dia, provas ou eventos externos podem alterar desempenho.  
+- **Maturation:** cansaço em aulas longas pode prejudicar resultados.  
+- **Instrumentation:** tratamento T1 e T2 utilizam artefatos diferentes (protótipo vs. PDF), podendo gerar diferenças além da representação em si.  
+- **Contaminação entre grupos:** alunos podem trocar arquivos ou espiar o material do outro grupo.
+
+### **Mitigações planejadas**
+- **Randomização estratificada** por período e nível técnico para reduzir seleção enviesada.  
+- Execução **simultânea** dos grupos em laboratório para minimizar efeitos externos.  
+- Mesma duração (50 min), mesma sala e mesmo ambiente para todos.  
+- Instruções claras proibindo compartilhamento de materiais entre grupos.  
+- Monitoramento ativo para evitar contaminação.  
+- Uso de **instrumentos equivalentes** em conteúdo (T1/T2 descrevem a mesma tela).
+
+### 13.3 Validade de constructo
+
+Aponta a adequação das métricas usadas para representar os conceitos teóricos investigados.
+
+### **Possíveis ameaças**
+- **Ambiguidade nas métricas de qualidade:** diferentes avaliadores poderiam interpretar critérios de forma distinta.  
+- **Escalas subjetivas (Likert) podem ser interpretadas de modos distintos pelos estudantes.**  
+- **Autoavaliação técnica (0–10)** pode não refletir o nível real de conhecimento.
+
+### **Mitigações planejadas**
+- Uso de uma **rubrica detalhada**, com critérios objetivos e exemplos.  
+- Aplicação de **escala Likert padronizada**, sem ambiguidade nas frases.  
+- Manter **avaliador único** para minimizar variação inter-avaliador.  
+- Validar instrumentos no **piloto** (Seção 11.4), ajustando termos confusos.  
+- Considerar não apenas a autoavaliação, mas **comportamentos observáveis** no código (qualidade estrutural, domínio de sintaxe).
+
+### 13.4 Validade externa
+
+Aponta o grau de generalização dos resultados para outros contextos.
+
+### **Possíveis ameaças**
+- **Participantes são estudantes**, não desenvolvedores profissionais.  
+- **Tarefa limitada (uma tela apenas):** pode não representar sistemas complexos.  
+- **Ambiente controlado de laboratório:** difere de ambientes profissionais.  
+- **Uso de HTML/CSS/JS puros:** não reflete contextos modernos com frameworks (React, Angular).
+
+### **Mitigações planejadas**
+- Explicitar no relatório as limitações de generalização.  
+- Relacionar achados a **estudos anteriores** para triangulação.  
+- Destacar que o objetivo é **ensino e compreensão**, não extrapolação industrial.  
+- Recomendar experimentos futuros em contextos mais próximos da indústria.
+
+### 13.5 Resumo das principais ameaças e estratégias de mitigação
+
+### **Tabela – Síntese das ameaças e mitigadores**
+
+| Tipo de validade | Principais ameaças | Estratégias de mitigação |
+|------------------|-------------------|---------------------------|
+| **Conclusão** | Baixo poder estatístico; violação de premissas; subjetividade | Testes não paramétricos; rubrica padronizada; análise exploratória |
+| **Interna** | Seleção enviesada; contaminação; diferenças de motivação | Randomização estratificada; execução simultânea; regras claras |
+| **Constructo** | Escalas mal definidas; autoavaliação imprecisa | Rubrica objetiva; refinamento no piloto; avaliador único |
+| **Externa** | Uso de estudantes; tarefa simples; ambiente controlado | Explicitar limitações; comparar com literatura; sugerir replicações |
