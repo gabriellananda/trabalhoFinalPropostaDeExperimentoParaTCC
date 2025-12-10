@@ -17,10 +17,11 @@ EXP-REQ-PT-ENGSW-2025
   - v1.3 - Descrição do modelo conceitual e hipóteses; variáveis, fatores, tratamentos e objetos de estudo; desenho experimental.
   - v1.4 - Descrição da população, sujeitos e amostragem; instrumentação e protocolo operacional; plano de análise de dados (pré-execução)
   - v1.5 - Descrição da avaliação de validade (ameaças e mitigação).
+  - v1.6 - Atualizações e descrição da ética, privacidade e conformidade; recursos, infraestrutura e orçamento; cronograma, marcos e riscos operacionais; governança do experimento; plano de documentação e reprodutibilidade; plano de comunicação; critérios de prontidão para execução (Definition of Ready).
 
 ### 1.4 Datas
 - **Data de criação:** 23/11/2025  
-- **Última atualização:** 05/12/2025
+- **Última atualização:** 10/12/2025
 
 ### 1.5 Autores
 - **Nome:** *Gabriella Fernanda Silva PInto*  
@@ -310,7 +311,7 @@ O experimento assume que:
 
 - O **tipo de requisito** (protótipo vs. texto) é o **fator experimental principal**;
 - O **período do aluno** (1º, 5º, 8º) e o **nível de conhecimento autoavaliado** em HTML/CSS/JS atuam como **variáveis de bloqueio/moderação**, pois podem alterar a forma como o aluno interpreta e usa os requisitos;
-- As **respostas** (variáveis dependentes) são medidas em termos de:
+- As **respostas do estudo** são capturadas pelas métricas M1–M14, tendo como **variável dependente principal** a qualidade global da interface (M4) e um conjunto de **variáveis de apoio** relacionadas a:
   - Qualidade funcional e de usabilidade da interface;
   - Aderência aos requisitos;
   - Tempo de desenvolvimento;
@@ -386,22 +387,23 @@ Eles possuem **níveis variados de conhecimento** em HTML, CSS e JavaScript, med
 
 A tabela abaixo resume as variáveis independentes (fatores experimentais e de bloqueio) e seus níveis.
 
-#### Tabela 1 – Variáveis (independente, dependentes, moderadoras) e descrições
+#### Tabela 1 – Variáveis do experimento e classificações
 
 | Tipo de variável | Nome | Descrição | Métricas associadas |
 |------------------|------|-----------|----------------------|
-| Independente (fator principal) | Tipo de requisito | Forma de representação dos requisitos fornecidos ao aluno: Protótipo Interativo (Figma) ou Especificação Textual (PDF). | Tratamentos T1 (Protótipo) / T2 (Texto) |
-| Dependente | Qualidade funcional | Grau em que as funcionalidades esperadas (campos, botões, validações básicas) funcionam corretamente. | M1, M4 |
-| Dependente | Usabilidade | Qualidade de uso percebida e analisada, incluindo problemas de layout, legibilidade, navegação e feedback. | M2, M3, M4 |
-| Dependente | Tempo de desenvolvimento | Tempo total gasto pelo aluno para desenvolver a interface (até o limite de 50 minutos). | M5 |
-| Dependente | Tempo de retrabalho | Tempo adicional gasto em correções, se houver, após a primeira avaliação. | M6 |
-| Dependente | Aderência aos requisitos | Grau em que os requisitos especificados foram corretamente implementados (corretos, faltantes, incorretos). | M7, M8, M9 |
-| Dependente | Clareza percebida | Percepção do aluno sobre o quão claros estavam os requisitos recebidos (texto ou protótipo). | M12 |
-| Dependente | Facilidade percebida | Percepção sobre o quão fácil foi desenvolver a tela com base na representação fornecida. | M13 |
-| Dependente | Satisfação geral | Grau de satisfação do aluno com a atividade como um todo. | M14 |
+| **Independente (fator principal)** | Tipo de requisito | Forma de representação dos requisitos fornecidos ao aluno: Protótipo Interativo (Figma) ou Especificação Textual (PDF). | Tratamentos T1 (Protótipo) / T2 (Texto) |
+| **Dependente (única)** | Qualidade global da interface | Avaliação global da interface desenvolvida, considerando funcionalidade, usabilidade e layout. | **M4** |
+| Independente (produto – apoio) | Qualidade funcional | Grau em que as funcionalidades esperadas funcionam corretamente. | M1 |
+| Independente (produto – apoio) | Usabilidade | Qualidade de uso analisada, incluindo layout, legibilidade, navegação e feedback. | M2, M3 |
+| Independente (processo) | Tempo de desenvolvimento | Tempo total gasto pelo aluno para desenvolver a interface (até o limite de 50 minutos). | M5 |
+| Independente (processo) | Tempo de retrabalho | Tempo adicional gasto em correções, se houver. | M6 |
+| Independente (produto) | Aderência aos requisitos | Grau em que os requisitos especificados foram corretamente implementados. | M7, M8, M9 |
+| Independente (percepção) | Clareza percebida | Percepção do aluno sobre o quão claros estavam os requisitos recebidos. | M12 |
+| Independente (percepção) | Facilidade percebida | Percepção sobre o quão fácil foi desenvolver a tela. | M13 |
+| Independente (percepção) | Satisfação geral | Grau de satisfação do aluno com a atividade como um todo. | M14 |
 | Moderadora / Bloqueio | Período do aluno | Momento da formação em que o aluno se encontra (1º, 5º ou 8º período). | M10 |
-| Moderadora / Bloqueio | Nível de conhecimento em HTML/CSS/JS | Autoavaliação do aluno (0–10 para cada tecnologia) utilizada para estratificar em grupos “abaixo/igual a 5” e “acima de 5”. | (Formulário de autoavaliação) |
-| Controle | Ambiente e ferramentas | Laboratório, VS Code, Chrome, Figma, tempo de 50 minutos, mesma tarefa de desenvolvimento. | (Parâmetros constantes) |
+| Moderadora / Bloqueio | Nível de conhecimento em HTML/CSS/JS | Autoavaliação (0–10) usada para estratificação dos grupos. | Formulário de autoavaliação |
+| Controle | Ambiente e ferramentas | Laboratório, VS Code, Chrome, Figma, tempo de 50 minutos, mesma tarefa. | Parâmetros constantes |
 
 ### 8.4 Tratamentos (condições experimentais)
 
@@ -413,15 +415,19 @@ Serão definidos dois tratamentos principais:
 - **T2 – Especificação Textual (PDF):**  
   Os alunos recebem uma especificação textual em PDF, descrevendo os requisitos da mesma tela, com campos obrigatórios, opcionais e regras básicas.
 
-### 8.5 Variáveis dependentes (respostas)
+### 8.5 Variável dependente principal e variáveis de apoio
 
-As principais variáveis dependentes (já alinhadas com as métricas M1–M14) são:
+No contexto deste experimento:
 
-- **Qualidade funcional:** Nº de defeitos funcionais (M1) e nota global (M4);
-- **Usabilidade:** Nº de problemas de usabilidade (M2) e nota de usabilidade (M3);
-- **Tempo:** Tempo total de desenvolvimento (M5) e eventual tempo de retrabalho (M6);
-- **Aderência:** Cobertura de requisitos (M7), requisitos faltantes (M8) e incorretos (M9);
-- **Experiência subjetiva:** Clareza percebida (M12), facilidade (M13) e satisfação (M14).
+- A **variável dependente principal** é:
+  - **Qualidade global da interface:** medida pela métrica **M4** (nota global de qualidade da interface).
+
+- As demais métricas M1–M3 e M5–M14 são tratadas como **variáveis de apoio/resultado**, usadas para interpretar e detalhar o efeito do tipo de requisito (fator principal) sobre a qualidade global, incluindo:
+  - **Qualidade funcional:** Nº de defeitos funcionais (M1);
+  - **Usabilidade:** Nº de problemas de usabilidade (M2) e nota de usabilidade (M3);
+  - **Tempo:** Tempo total de desenvolvimento (M5) e tempo de retrabalho (M6);
+  - **Aderência aos requisitos:** Cobertura de requisitos (M7), requisitos faltantes (M8) e incorretos (M9);
+  - **Experiência subjetiva:** Clareza percebida (M12), facilidade (M13) e satisfação (M14).
 
 ### 8.6 Variáveis de controle / bloqueio
 
@@ -985,3 +991,229 @@ Aponta o grau de generalização dos resultados para outros contextos.
 | **Interna** | Seleção enviesada; contaminação; diferenças de motivação | Randomização estratificada; execução simultânea; regras claras |
 | **Constructo** | Escalas mal definidas; autoavaliação imprecisa | Rubrica objetiva; refinamento no piloto; avaliador único |
 | **Externa** | Uso de estudantes; tarefa simples; ambiente controlado | Explicitar limitações; comparar com literatura; sugerir replicações |
+
+---
+
+## 14. Ética, privacidade e conformidade
+
+### 14.1 Questões éticas (uso de sujeitos, incentivos, etc.)
+
+Este experimento envolve estudantes de graduação em um contexto acadêmico, o que exige atenção a possíveis questões éticas relacionadas ao uso de sujeitos humanos.
+
+As principais questões éticas consideradas são:
+
+- **Uso de estudantes como sujeitos de pesquisa**  
+  Existe o risco de que os alunos se sintam obrigados a participar por estarem inseridos em uma disciplina. Para mitigar esse risco, será reforçado que a participação é voluntária e que a decisão de participar ou não não terá impacto na avaliação acadêmica do aluno.
+
+- **Pressão indireta ou relação de poder**  
+  Para evitar constrangimento ou coerção, os dados serão analisados de forma agregada e anonimizada, e os docentes não terão acesso a resultados individuais identificáveis.
+
+- **Incentivos**  
+  Não haverá incentivos financeiros ou acadêmicos. Eventual feedback técnico poderá ser oferecido apenas como atividade formativa, sem vínculo com nota.
+
+- **Risco de exposição ou constrangimento**  
+  Não serão coletados dados sensíveis. Avaliações individuais não serão divulgadas, apenas resultados consolidados para fins acadêmicos.
+
+### 14.2 Consentimento informado
+
+Antes da execução do experimento, os participantes serão informados sobre:
+
+- Objetivo do estudo;
+- Atividades a serem realizadas;
+- Tipos de dados coletados;
+- Uso acadêmico dos dados;
+- Garantias de anonimato e confidencialidade;
+- Liberdade para desistir a qualquer momento, sem prejuízo acadêmico.
+
+O consentimento será registrado por meio de um **termo de consentimento informado**, em formato digital ou impresso. Apenas os dados dos estudantes que aceitarem formalmente participar serão incluídos na análise.
+
+### 14.3 Privacidade e proteção de dados
+
+Os dados coletados incluem:
+
+- Período do aluno;
+- Autoavaliação técnica em HTML/CSS/JS;
+- Métricas de desempenho (M1–M14);
+- Respostas a questionários pós-tarefa.
+
+As medidas de proteção incluem:
+
+- Uso de **identificadores anônimos** para análise;
+- Separação entre dados identificáveis e dados analíticos;
+- Armazenamento dos dados em repositórios privados com controle de acesso;
+- Divulgação apenas de resultados agregados.
+
+Os dados serão mantidos até a conclusão do TCC e eventuais publicações associadas, sendo posteriormente descartados ou mantidos apenas em formato totalmente anonimizado.
+
+### 14.4 Aprovações necessárias
+
+Por se tratar de um experimento acadêmico de baixo risco, realizado em disciplina, são previstas as seguintes aprovações:
+
+- Aprovação do orientador do TCC;
+- Alinhamento e autorização do docente responsável pela disciplina;
+- Comunicação à coordenação do curso, se necessário.
+
+Caso a instituição exija submissão a comitê de ética, o experimento será submetido antes da execução.
+
+---
+
+## 15. Recursos, infraestrutura e orçamento
+
+### 15.1 Recursos humanos e papéis
+
+- **Pesquisadora principal (aluna)**  
+  Responsável pelo planejamento, execução, coleta e análise dos dados e redação do TCC.
+
+- **Orientador do TCC**  
+  Responsável pela validação metodológica, acompanhamento científico e orientação geral.
+
+- **Docente da disciplina**  
+  Apoia a execução em sala/laboratório e a comunicação com os estudantes.
+
+### 15.2 Infraestrutura técnica necessária
+
+- Laboratórios de informática da PUC Minas – Unidade Lourdes;
+- Computadores com navegador web e IDE (VS Code);
+- Acesso à internet;
+- Ferramenta de prototipação (Figma);
+- Ferramenta de formulários online;
+- Repositório para armazenamento de códigos e dados.
+
+### 15.3 Materiais e insumos
+
+- Protótipo interativo em Figma (T1);
+- Especificação textual em PDF (T2);
+- Formulário de autoavaliação técnica;
+- Questionário pós-tarefa;
+- Rubrica/checklist de avaliação;
+- Planilhas de consolidação de métricas;
+- Termo de consentimento informado.
+
+### 15.4 Orçamento e custos estimados
+
+Não há custos financeiros diretos previstos, pois a infraestrutura e as ferramentas utilizadas são fornecidas pela instituição ou possuem versões gratuitas adequadas. Os custos são limitados a horas de trabalho acadêmico da pesquisadora, do orientador e dos docentes envolvidos.
+
+---
+
+## 16. Cronograma, marcos e riscos operacionais
+
+### 16.1 Macrocronograma
+
+| Marco | Período estimado |
+|------|------------------|
+| Finalização do plano | Semana 1 |
+| Revisão pelo orientador | Semana 2 |
+| Alinhamento com docente | Semana 3 |
+| Preparação dos instrumentos | Semana 4 |
+| Piloto (se houver) | Semana 5 |
+| Ajustes pós-piloto | Semana 6 |
+| Execução do experimento | Semana 7 |
+| Consolidação inicial dos dados | Semana 8 |
+
+### 16.2 Dependências entre atividades
+
+- A execução do experimento depende da aprovação do plano e da finalização dos instrumentos.
+- A análise dos dados depende da coleta completa e validação das métricas.
+- O piloto depende de uma versão preliminar validada do protocolo.
+
+### 16.3 Riscos operacionais e contingência
+
+- **Falta de participantes**: reagendar sessão ou reduzir amostra com registro da limitação.
+- **Falhas técnicas**: manter versões offline dos materiais.
+- **Indisponibilidade de laboratório**: remarcação da data.
+- **Atrasos na aprovação**: antecipar revisões com o orientador.
+
+---
+
+## 17. Governança do experimento
+
+### 17.1 Papéis e responsabilidades
+
+- **Decisão científica**: Orientador do TCC;
+- **Execução operacional**: Pesquisadora;
+- **Apoio institucional**: Docente da disciplina;
+- **Partes informadas**: Coordenação do curso.
+
+### 17.2 Ritos de acompanhamento pré-execução
+
+- Reuniões periódicas com o orientador;
+- Checkpoints com o docente da disciplina;
+- Revisão final de prontidão antes da execução.
+
+### 17.3 Controle de mudanças
+
+Alterações no desenho experimental ou escopo devem ser discutidas com o orientador, registradas em nova versão do plano e refletidas no histórico de revisão do documento.
+
+---
+
+## 18. Plano de documentação e reprodutibilidade
+
+### 18.1 Repositórios e convenções
+
+O experimento será documentado em um repositório Git privado, organizado em pastas como:
+
+- `/docs`
+- `/instrumentos`
+- `/dados`
+- `/scripts`
+
+Os arquivos seguirão convenções claras de nomeação e versionamento.
+
+### 18.2 Templates e artefatos padrão
+
+- Questionários;
+- Rubricas;
+- Planilhas de métricas;
+- Termo de consentimento;
+- Instruções operacionais.
+
+### 18.3 Empacotamento para replicação
+
+Será preparado um pacote contendo plano, instrumentos, materiais de requisitos e instruções passo a passo para facilitar replicações futuras por outros pesquisadores ou docentes.
+
+---
+
+## 19. Plano de comunicação
+
+### 19.1 Públicos e mensagens-chave
+
+- **Estudantes**: objetivos, voluntariedade, anonimato, datas.
+- **Docente da disciplina**: escopo, logística, benefícios didáticos.
+- **Orientador e coordenação**: planejamento, impactos e resultados esperados.
+
+### 19.2 Canais e frequência
+
+- Comunicação oral em sala;
+- E-mails institucionais;
+- Reuniões periódicas com orientador e docente.
+
+### 19.3 Pontos obrigatórios de comunicação
+
+- Aprovação do plano;
+- Alterações relevantes;
+- Adiamentos ou cancelamentos.
+
+---
+
+## 20. Critérios de prontidão para execução (Definition of Ready)
+
+### 20.1 Checklist de prontidão
+
+- [ ] Plano revisado e aprovado;
+- [ ] Instrumentos finalizados;
+- [ ] Aprovação do orientador;
+- [ ] Alinhamento com docente;
+- [ ] Laboratório reservado;
+- [ ] Repositório configurado;
+- [ ] Termo de consentimento definido;
+- [ ] Planilha M1–M14 pronta.
+
+### 20.2 Aprovações finais
+
+O experimento será iniciado somente após:
+
+- Aprovação formal do orientador;
+- Confirmação operacional pelo docente da disciplina;
+- Aprovações éticas ou administrativas, se exigidas.
+
+Com esses critérios atendidos, o experimento será considerado pronto para execução.
